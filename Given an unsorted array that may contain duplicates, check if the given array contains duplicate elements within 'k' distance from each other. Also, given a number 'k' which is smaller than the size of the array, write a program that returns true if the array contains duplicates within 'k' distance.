@@ -1,0 +1,17 @@
+def contains_duplicate_within_k(nums, k):
+    num_indices = {}
+
+    for i, num in enumerate(nums):
+        if num in num_indices and i - num_indices[num] <= k:
+            return True
+        num_indices[num] = i
+
+    return False
+n = int(input())
+arr = list(map(int, input().split()))
+k = int(input())
+result = contains_duplicate_within_k(arr, k)
+if result:
+    print("Yes")
+else:
+    print("No")
