@@ -1,0 +1,8 @@
+def transpose_matrix(matrix):
+    transposed_matrix = [list(row) for row in zip(*matrix)]
+    return transposed_matrix
+rows, columns = map(int, input().split())
+matrix = [list(map(int, input().split())) for _ in range(rows)]
+transposed_matrix = transpose_matrix(matrix)
+for row in transposed_matrix:
+    print(" ".join(map(str, row)))
