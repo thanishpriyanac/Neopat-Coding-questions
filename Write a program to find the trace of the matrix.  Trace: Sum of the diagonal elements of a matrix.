@@ -1,0 +1,14 @@
+def find_trace(matrix):
+    rows, columns = len(matrix), len(matrix[0])
+    if rows != columns:
+        return "Matrix is not square. Trace not defined."
+
+    trace = sum(matrix[i][i] for i in range(rows))
+    return trace
+N = int(input())
+matrix = [list(map(int, input().split())) for _ in range(N)]
+if len(matrix) == len(matrix[0]):
+    trace_value = find_trace(matrix)
+    print(trace_value)
+else:
+    print("Rows and columns must be equal for a square matrix.")
