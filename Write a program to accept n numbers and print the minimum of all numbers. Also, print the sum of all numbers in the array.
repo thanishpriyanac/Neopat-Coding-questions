@@ -1,0 +1,9 @@
+def find_min_and_sum(numbers):
+    min_num = min(numbers)
+    sum_nums = sum(numbers)
+    return min_num, sum_nums
+N = int(input())
+numbers = list(map(int, input().split()))
+min_num, sum_nums = find_min_and_sum(numbers)
+print(f"Minimum={min_num}")
+print(f"Sum of all elements={sum_nums}")
