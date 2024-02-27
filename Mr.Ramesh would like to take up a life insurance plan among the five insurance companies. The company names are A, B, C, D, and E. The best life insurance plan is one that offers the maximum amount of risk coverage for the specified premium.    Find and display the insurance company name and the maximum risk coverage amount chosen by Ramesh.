@@ -1,0 +1,7 @@
+def find_max_risk_coverage(risk_coverages):
+    max_coverage = max(risk_coverages)
+    selected_company = chr(ord('A') + risk_coverages.index(max_coverage))
+    return selected_company, max_coverage
+risk_coverages = list(map(int, input().split()))
+selected_company, max_coverage = find_max_risk_coverage(risk_coverages)
+print(f"{selected_company} {max_coverage}")
